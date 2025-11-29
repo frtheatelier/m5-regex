@@ -25,11 +25,6 @@ public class Main {
     }
 
     // Method 1 for checking if a string matches a regex: using Pattern.matches
-    // TODO: Modify this code to check if the given string is non-empty, contains at least
-    //       one lower case letter, at least one upper case letter, and at least one digit. If the
-    //       string has all of these properties, the method should return true. If it is missing one
-    //       or more properties, it should return false.
-
     /**
      * Returns whether a given string is non-empty, contains one lower case letter,
      * at least one upper case letter, at least one digit, and meets the minimum length.
@@ -46,11 +41,6 @@ public class Main {
     }
 
     // Method 2 for checking if a string conforms to a regex: using Matcher.find
-    // TODO: Modify this method to return a list of all email addresses contained in the
-    //       input string that end with "@mail.utoronto.ca" or "@utoronto.ca" with at least one
-    //       character before the "@" symbol. The email addresses should be in the order they
-    //       appear in the string.
-
     /**
      * Returns a list of email addresses that occur in a given string.
      * @param str the string to look for email addresses in
@@ -69,11 +59,6 @@ public class Main {
     }
 
     // Method 3 for checking if a string conforms to a regex: using String.matches
-
-    // TODO: Modify this method to check whether or not the string contains the same capital letter
-    //       twice. For example "Amazing Apple" contains "A" twice. If the string does repeat the same
-    //       capital letter twice, the method should return true. Otherwise it should return false.
-
     /**
      * Checks whether a given string contains the same capital letter twice.
      * @param str the string to look for doubles in
