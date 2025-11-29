@@ -38,9 +38,10 @@ public class Main {
      * @return whether the string satisfies the password requirements
      */
     public static boolean checkForPassword(String str, int minLength) {
+        if (str == null || str.length() < minLength) return false;
+
         final boolean propertyOne = Pattern.matches("(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).+", str);
         // as needed, modify this code.
-        if (str.length() < minLength) {return false;}
         return propertyOne;
     }
 
@@ -56,6 +57,8 @@ public class Main {
      * @return a list containing the email addresses in the string.
      */
     public static List<String> extractEmails(String str) {
+        if (str == null || str.isEmpty()) return new ArrayList<>();
+
         final Pattern pattern = Pattern.compile("\\w+@(mail.)?utoronto.ca");
         final Matcher matcher = pattern.matcher(str);
         final List<String> result = new ArrayList<>();
@@ -78,6 +81,7 @@ public class Main {
      */
     public static boolean checkForDoubles(String str) {
         // given that there are no tests that test for letters appearing thrice, i will. ignore. that edge case. bc hell brain HURTS
+        if (str == null || str.isEmpty()) return false;
         return str.matches(".*([A-Z])[^\1]*\\1.*");
 //        return str.matches(".*([A-Z])[^\1]*\\1.*");
 //        return str.matches("(([de])f)\\2\\1");
